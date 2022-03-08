@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://MainGame/grass2.jpg" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
@@ -7,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 40.6271, 49.5372 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
@@ -53,10 +57,10 @@ text = "0"
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",
 ]]
-position = Vector2( -1.53629, 369.479 )
+position = Vector2( 37.3267, 358.375 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37704, -0.768158 )
+position = Vector2( -47.9412, 2.93307 )
 shape = SubResource( 1 )
 
 [node name="Border_Right" type="Area2D" parent="." groups=[
@@ -65,11 +69,16 @@ shape = SubResource( 1 )
 position = Vector2( 1287.42, 368.711 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
-position = Vector2( -5.37704, -0.768158 )
+position = Vector2( -5.37708, -0.768158 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1206.77, 352.768 )
+
+[node name="Area2D2" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D2"]
+shape = SubResource( 3 )
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=[
 "top",
@@ -192,3 +201,15 @@ position = Vector2( -1935.39, 342.927 )
 
 [node name="Enemy32" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( -1896.39, 442.927 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = 4.76285
+margin_top = -13.5084
+margin_right = 1301.76
+margin_bottom = 738.492
+texture = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

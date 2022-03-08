@@ -12,8 +12,3 @@ func _ready():
 
 func _physics_process(delta):
 	global_position.x += speed * delta
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
