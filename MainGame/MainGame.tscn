@@ -9,10 +9,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 40.6271, 49.5372 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 662.058, 10 )
 
 [node name="BorderCollieHunt" type="Control"]
@@ -60,7 +60,7 @@ text = "0"
 position = Vector2( 37.3267, 358.375 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -47.9412, 2.93307 )
+position = Vector2( -49.3311, 3.39636 )
 shape = SubResource( 1 )
 
 [node name="Border_Right" type="Area2D" parent="." groups=[
@@ -78,7 +78,7 @@ position = Vector2( 1206.77, 352.768 )
 [node name="Area2D2" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D2"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=[
 "top",
@@ -89,7 +89,7 @@ position = Vector2( 646.934, -31.955 )
 "top",
 ]]
 position = Vector2( 0, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Border_Bottom" type="KinematicBody2D" parent="." groups=[
 "bottom",
@@ -100,7 +100,7 @@ position = Vector2( 646.934, 748.484 )
 "top",
 ]]
 position = Vector2( 0, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 705.16, 3.84076 )
